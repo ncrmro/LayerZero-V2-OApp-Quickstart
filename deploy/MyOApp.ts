@@ -1,4 +1,4 @@
-import assert from 'assert'
+import * as assert from 'assert'
 
 import { type DeployFunction } from 'hardhat-deploy/types'
 
@@ -24,6 +24,8 @@ const deploy: DeployFunction = async (hre) => {
     // For this to work correctly, your network config must define an eid property
     // set to `EndpointId` as defined in @layerzerolabs/lz-definitions
     //
+    // For local networks, we use mock endpoints deployed by the MockEndpoint script
+    //
     // For example:
     //
     // networks: {
@@ -48,5 +50,6 @@ const deploy: DeployFunction = async (hre) => {
 }
 
 deploy.tags = [contractName]
+deploy.dependencies = ['MockEndpoint'] // Ensure mock endpoint is deployed first for local networks
 
 export default deploy

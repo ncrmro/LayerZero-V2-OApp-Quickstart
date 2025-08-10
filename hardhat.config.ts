@@ -68,18 +68,20 @@ const config: HardhatUserConfig = {
             // Need this for testing because TestHelperOz5.sol is exceeding the compiled contract size limit
             allowUnlimitedContractSize: true,
         },
-        // Local development networks for CI
+        // Local development networks for CI testing
+        // Note: For local testing, we don't use real LayerZero endpoints
+        // Instead, we deploy mock endpoints as shown in the test suite
         'hardhat-local-1': {
-            eid: 31337, // Custom EID for local network 1
             url: 'http://127.0.0.1:8545',
             accounts: accounts || ['0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80'], // default hardhat account
             allowUnlimitedContractSize: true,
+            chainId: 31337,
         },
         'hardhat-local-2': {
-            eid: 31338, // Custom EID for local network 2
             url: 'http://127.0.0.1:8546',
             accounts: accounts || ['0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80'], // default hardhat account
             allowUnlimitedContractSize: true,
+            chainId: 31338,
         },
     },
     namedAccounts: {
