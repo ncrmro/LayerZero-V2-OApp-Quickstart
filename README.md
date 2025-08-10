@@ -8,6 +8,30 @@
   <a href="https://docs.layerzero.network/" style="color: #a77dff">LayerZero Docs</a>
 </p>
 
+<h1 align="center">LayerZero V2 OApp Quickstart with CI</h1>
+
+<p align="center">This repository demonstrates a complete LayerZero V2 OApp (Omnichain Application) quickstart that automatically deploys to two local Hardhat networks via GitHub Actions CI.</p>
+
+## 🚀 Quick CI Demo
+
+This project showcases:
+
+- ✅ **Automated OApp Creation**: Generated using `npx create-lz-oapp@latest --example oapp`
+- ✅ **Dual Network Deployment**: Deploys to two local Hardhat networks (ports 8545 & 8546)
+- ✅ **CI/CD Integration**: GitHub Actions workflow handles the complete deployment pipeline
+- ✅ **Cross-chain Ready**: Pre-configured for LayerZero V2 cross-chain messaging
+
+The CI workflow automatically:
+1. Installs dependencies and compiles contracts
+2. Runs tests to verify OApp functionality
+3. Starts two local Hardhat networks
+4. Deploys the MyOApp contract to both networks
+5. Verifies successful deployment
+
+View the latest CI run in the [Actions tab](../../actions) to see the automated deployment in action!
+
+---
+
 <h1 align="center">Omnichain Application (OApp) Example</h1>
 
 <p align="center">Template project for creating custom omnichain applications (<a href="https://docs.layerzero.network/v2/concepts/applications/oapp-standard">OApp</a>) powered by the LayerZero protocol. This example demonstrates how to build applications that can send and receive arbitrary messages across different blockchains.</p>
